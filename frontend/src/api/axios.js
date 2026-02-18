@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "http://localhost:5000/api"
+  baseURL: "https://hackmatch-v9nv.onrender.com/api"
 });
 
 // 🔥 Attach token automatically
