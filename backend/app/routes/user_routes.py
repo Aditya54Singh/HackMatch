@@ -124,7 +124,7 @@ def connect_user(target_id):
     
     existing = UserConnection.query.filter_by(
         follower_id = current_user_id,
-        following_id = target_id
+        followed_id = target_id
     ).first()
 
     if existing:
@@ -134,7 +134,7 @@ def connect_user(target_id):
     
     new_connection = UserConnection(
         follower_id = current_user_id,
-        following_id = target_id
+        followed_id = target_id
     )
 
     db.session.add(new_connection)
