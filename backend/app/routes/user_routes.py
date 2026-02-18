@@ -156,7 +156,7 @@ def get_connections():
     result = []
 
     for conn in connections:
-        user = User.query.get(conn.following_id)
+        user = User.query.get(conn.followed_id)
 
         joined_hackathons = [
             {
